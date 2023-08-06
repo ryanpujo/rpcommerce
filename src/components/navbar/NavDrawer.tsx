@@ -20,7 +20,7 @@ const NavDrawer: FC<NavBarProps> = ({ className, navs }) => {
         <ul className="menu p-4 w-60 h-full bg-base-200 text-base-content">
           {/* Sidebar content here */}
           <div className=" flex justify-center">
-            <h3 className="text-lg text-white">RProjects</h3>
+            <h3 className="text-lg">RProjects</h3>
           </div>
           <div className="divider"></div>
           {navs.map((nav) => (

@@ -1,8 +1,14 @@
 import React, { FC } from 'react';
 import { NavBarProps } from './NavBar';
 import Image from 'next/image';
+import DarkSwitcher from '../DarkSwitcher';
 
-const DesktopNav: FC<NavBarProps> = ({ className, navs }) => {
+const DesktopNav: FC<NavBarProps> = ({
+  className,
+  navs,
+  handleToggle,
+  theme,
+}) => {
   return (
     <nav className={'navbar bg-base-100 ' + className}>
       <div className="navbar-start text-white">RProjects</div>
@@ -16,6 +22,11 @@ const DesktopNav: FC<NavBarProps> = ({ className, navs }) => {
         </ul>
       </div>
       <div className="navbar-end">
+        <DarkSwitcher
+          theme={theme}
+          className="text-white"
+          handleToggle={handleToggle}
+        />
         <label className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             <Image src={'/nika.png'} alt="avatar" width={15} height={15} />
