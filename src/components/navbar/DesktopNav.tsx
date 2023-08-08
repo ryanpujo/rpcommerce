@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { NavBarProps } from './NavBar';
-import Image from 'next/image';
 import DarkSwitcher from '../DarkSwitcher';
+import DropdownAvatar from '../DropdownAvatar';
 
 const DesktopNav: FC<NavBarProps> = ({
   className,
@@ -10,7 +10,7 @@ const DesktopNav: FC<NavBarProps> = ({
   theme,
 }) => {
   return (
-    <nav className={'navbar bg-base-100 ' + className}>
+    <nav className={'navbar bg-blue-600 ' + className}>
       <div className="navbar-start text-white">RProjects</div>
       <div className="navbar-center">
         <ul className="menu menu-horizontal text-white">
@@ -27,11 +27,7 @@ const DesktopNav: FC<NavBarProps> = ({
           className="text-white"
           handleToggle={handleToggle}
         />
-        <label className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <Image src={'/nika.png'} alt="avatar" width={15} height={15} />
-          </div>
-        </label>
+        <DropdownAvatar />
       </div>
     </nav>
   );

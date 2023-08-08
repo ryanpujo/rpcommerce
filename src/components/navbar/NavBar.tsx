@@ -34,13 +34,13 @@ const NavBar = () => {
         theme={theme ? theme : 'corporate'}
         handleToggle={handleToggle}
         navs={navs}
-        className="hidden md:inline-flex bg-blue-600"
+        className="hidden md:inline-flex"
       />
       <MobileNav
         theme={theme ? theme : 'corporate'}
         handleToggle={handleToggle}
         navs={navs}
-        className="md:hidden bg-blue-600"
+        className="md:hidden"
       />
     </>
   );
