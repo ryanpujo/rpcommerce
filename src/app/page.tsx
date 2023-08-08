@@ -1,7 +1,9 @@
+import Homepage from '@/components/Homepage/Homepage';
+
 export default function Home() {
   return (
     <main className="">
-      <div className="text-7xl">hello world</div>
+      <Homepage />
     </main>
   );
 }
